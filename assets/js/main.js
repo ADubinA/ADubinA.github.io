@@ -294,21 +294,32 @@ jQuery(document).ready(function($) {
     function initialize() {
         map = new GMaps({
             div: '#map',
-            lat: -37.817917,
-            lng: 144.965065,
-            zoom: 16
+            lat: 31.8728577,
+            lng: 34.7319719,
+            zoom: 10
 
         });
         map.addMarker({
-            lat: -37.81792,
-            lng: 144.96506,
+            lat: 31.8728577,
+            lng: 34.7319719,
             title: 'Marker with InfoWindow',
-            icon: 'images/pins-map/map-marker.png',
+            
             infoWindow: {
-                content: '<p>Melbourne Victoria, 300, Australia</p>'
+                content: '<p>Yavne, Israel</p>'
             }
         });
     }
+	function initMap() {
+        var uluru = {lat: -25.363, lng: 131.044};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
 
     /* ---------------------------------------------------------------------- */
     /* --------------------------------- Blog ------------------------------- */
